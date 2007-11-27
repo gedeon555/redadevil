@@ -6,7 +6,7 @@
 ## Login   <homerlan@homerlan>
 ## 
 ## Started on  Mon Nov 26 16:06:55 2007 Homerlan
-## Last update Tue Nov 27 11:41:17 2007 Homerlan
+## Last update Tue Nov 27 12:21:21 2007 Homerlan
 ##
 
 if [ $# -lt 2 ]; then
@@ -17,5 +17,9 @@ fi
 for i in $1/*.sph;
 do
     echo "Computing MFCC for file $i...";
-    HCopy -C $2 $i `echo $i | sed 's/.sph/.mfcc/g'`
+    file_tmp=`echo $i | sed 's/.sph/.tmp/g'`
+    file_mfcc=`echo $i | sed 's/.sph/.mfcc/g'`
+    HCopy -C $2 $i $file_tmp
+    HList -r $file_tmp > $file_mfcc
+    rm -rf $file_tmp
 done
