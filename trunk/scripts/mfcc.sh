@@ -6,7 +6,7 @@
 ## Login   <homerlan@homerlan>
 ## 
 ## Started on  Mon Nov 26 16:06:55 2007 Homerlan
-## Last update Tue Nov 27 12:21:21 2007 Homerlan
+## Last update Wed Nov 28 17:01:48 2007 Homerlan
 ##
 
 if [ $# -lt 2 ]; then
