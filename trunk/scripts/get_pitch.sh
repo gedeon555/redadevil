@@ -15,8 +15,8 @@ if [ $# -lt 2 ]; then
 fi
 
 current=`pwd`
-for i in $1/*.sph;
+for i in $1/speech-*.wav;
 do
-    echo "Computing pitch for file $i...";
+    echo -n "$i ";
     praat $2/get_pitch.praat $i
 done
