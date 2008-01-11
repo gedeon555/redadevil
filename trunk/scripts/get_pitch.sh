@@ -17,6 +17,8 @@ fi
 current=`pwd`
 for i in $1/speech-*.wav;
 do
-    echo -n "$i ";
-    praat $2/get_pitch.praat $i
+    echo $i;
+    echo $i >> tst-pitch-files.txt;
+    praat $2/get_pitch.praat $i >> tst-pitch.txt
+    
 done
