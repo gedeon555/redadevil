@@ -32,21 +32,16 @@ threshold = ((mu_female - sigma_female * 2) + (mu_male + sigma_male * 2)) / 2;
 
 errors = 0;
 total = 0;
-for i=1:size(data, 1)
-    if data(i, 1) <= threshold
-        fprintf('Male 0 == %i (%i)\n', data(i, 2), round(data(i, 1) - threshold));
-        if data(i, 2) == 1
-           errors = errors + 1; 
-        end
+
+filename = [dir '/data/tst-pitch.txt'];
+data = load(filename);
+for i=1:size(data)
+    if data(i) <= threshold
+        fprintf('%i Male = %i\n', i, round(data(i) - threshold));
     else
-        fprintf('Female 1 == %i (%i)\n', data(i, 2), round(data(i, 1) - threshold));  
-        if data(i, 2) == 0
-           errors = errors + 1; 
-        end
+        fprintf('%i Female = %i\n', i, round(data(i) - threshold)); 
     end
-    total = total + 1;
 end
-fprintf('errors: %i/%i (%i percents)\n', errors, total, round(100 * errors / total));
 
 %x = 0:1:400;
 %plot(x, gaussmf(x, [ sqrt(g.covars) g.centres ]));
