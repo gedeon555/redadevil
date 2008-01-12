@@ -18,7 +18,7 @@ function g = apprend_locuteur (nom_de_fichier)
     %non_nuls = find(mfccs(:, 1) == 0 & mfccs(:, 2) == 0 &mfccs(:, 3) == 0 & mfccs(:, 4) == 0 & mfccs(:, 5) == 0 & mfccs(:, 6) == 0 & mfccs(:, 7) == 0 & mfccs(:, 8) == 0 & mfccs(:, 9) == 0 & mfccs(:, 10) == 0 & mfccs(:, 11) == 0 & mfccs(:, 12) == 0 & mfccs(:, 13) == 0 & mfccs(:, 14) == 0 & mfccs(:, 15) == 0);
     %non_nuls
     %mfccs_non_nuls = mfccs(non_nuls, 1:15);
-    g = gmm(15, 512, 'diag');
+    g = gmm(15, 255, 'diag');
     
     o = zeros(1, 16);
     o(1) = 1;
