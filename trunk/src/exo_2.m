@@ -1,2 +1,2 @@
 addpath '../lib/netlab';
-apprend_locuteur('../speech-sp01.mfcc');
+apprend_locuteur_2('../speech-sp01.mfcc');
