@@ -22,14 +22,14 @@ fichiers_tests = ['cw'; 'ed'; 'eh'; 'eo'; 'er'; 'fd'; 'fh'; 'fl'; 'fp'; 'fu'; 'f
         'dw'; 'eg'; 'el'; 'eq'; 'ez'; 'fg'; 'fj'; 'fn'; 'fs'; 'fw'; 'gb'; 'ge'; 'gh'; 'gk'; 'gn'];
 
 
-for numero = 1:10%size(fichiers_tests)
-    nom_du_fichier = fichiers_apprentissage(numero, :);
-    fprintf('%s...\n', nom_du_fichier);
+for numero = 1:size(fichiers_tests)
+    nom_du_fichier = fichiers_tests(numero, :);
+    %fprintf('%s...\n', nom_du_fichier);
     mfccs = load(['../data/ntst_11/speech-' nom_du_fichier '.mfcc']);
     for i=1:size(tab_g, 2)
-        fprintf('%i .. ', i);
-        result(numero, i) = mean(gmmprob(tab_g(i), mfccs));
+        %fprintf('%i .. ', i);
+        result(numero, i) = sum(log((gmmprob(tab_g(i), mfccs))));
     end
-    fprintf('\n');
+    %fprintf('\n');
     fprintf('%s => %s\n', nom_du_fichier, fichiers_apprentissage(find(result(numero,:) == max(result(numero, :))), :));
 end
