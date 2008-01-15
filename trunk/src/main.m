@@ -1,7 +1,8 @@
 addpath '../lib/netlab';
 
 % dev files
-%files = ['aa'; 'ad'; 'ag'; 'aj'; 'am'; 'ap'; 'as'; 'av'; 'az'; 'bc'; 'bf'; 'bi'; 'bl'; 'br'; 'bv'; 'by'; 'cd'; 'cl'; 'cz'; 'ds'; 'ab'; 'ae'; 'ah'; 'ak'; 'an'; 'aq'; 'at'; 'ax'; 'ba'; 'bd'; 'bg'; 'bj'; 'bm'; 'bs'; 'bw'; 'bz'; 'cf'; 'cr'; 'dd'; 'ac'; 'af'; 'ai'; 'al'; 'ao'; 'ar'; 'au'; 'ay'; 'bb'; 'be'; 'bh'; 'bk'; 'bo'; 'bu'; 'bx'; 'ca'; 'ci'; 'cu'; 'dm'];
+%files = ['aa'; 'ad'; 'ag'; 'aj'; 'am'; 'ap'; 'as'; 'av'; 'az'; 'bc'; 'bf';
+%'bi'; 'bl'; 'br'; 'bv'; 'by'; 'cd'; 'cl'; 'cz'; 'ds'; 'ab'; 'ae'; 'ah'; 'ak'; 'an'; 'aq'; 'at'; 'ax'; 'ba'; 'bd'; 'bg'; 'bj'; 'bm'; 'bs'; 'bw'; 'bz'; 'cf'; 'cr'; 'dd'; 'ac'; 'af'; 'ai'; 'al'; 'ao'; 'ar'; 'au'; 'ay'; 'bb'; 'be'; 'bh'; 'bk'; 'bo'; 'bu'; 'bx'; 'ca'; 'ci'; 'cu'; 'dm'];
 
 % ntst_11 files
 files = ['cw'; 'ed'; 'eh'; 'eo'; 'er'; 'fd'; 'fh'; 'fl'; 'fp'; 'fu'; 'fx'; 'gc'; 'gf'; 'gi'; 'gl'; 'go'; 
